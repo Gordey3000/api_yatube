@@ -2,9 +2,9 @@ from rest_framework import viewsets
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 
-from .serializers import CommentSerializer, GroupSerializer, PostSerializer
 from posts.models import Group, Post
-from api.permissions import VerificationOfAutorPermission
+from .permissions import VerificationOfAutorPermission
+from .serializers import CommentSerializer, GroupSerializer, PostSerializer
 
 
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
